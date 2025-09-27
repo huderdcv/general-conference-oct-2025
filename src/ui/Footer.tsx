@@ -1,6 +1,7 @@
 import { IoLogoFacebook, IoLogoTiktok } from 'react-icons/io5';
 
 import './footer.css';
+import { Link } from 'react-router';
 
 export const Footer = () => {
   return (
@@ -70,9 +71,9 @@ export const Footer = () => {
               </a>
             </li>
             <li>
-              <a href={'#'} className="footer-link">
+              <Link to={'/desafios'} className="footer-link">
                 Desafíos
-              </a>
+              </Link>
             </li>
           </ul>
           <p className="footer-msg">

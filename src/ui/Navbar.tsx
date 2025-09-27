@@ -1,7 +1,15 @@
 import { IoLogoGoogle } from 'react-icons/io5';
 import './navbar.css';
+import { Link } from 'react-router';
+import { useDispatch } from 'react-redux';
+import { startGoogleSignIn } from '../store/auth/thunks';
+import type { AppDispatch } from '../store';
 
 export const Navbar = () => {
+  const dispatch: AppDispatch = useDispatch();
+  const handleGoogleSignIn = () => {
+    dispatch(startGoogleSignIn());
+  };
   return (
     <header className="header">
       <a className="header-logo" href="#">
@@ -29,14 +37,17 @@ export const Navbar = () => {
             </a>
           </li>
           <li>
-            <a className="main-nav-link" href="#">
-              Desafios
-            </a>
+            <Link className="main-nav-link" to={'/desafios'}>
+              Desafíos
+            </Link>
           </li>
         </ul>
       </nav>
       <div className="header-actions">
-        <button className="action-login btn btn-primary">
+        <button
+          onClick={handleGoogleSignIn}
+          className="action-login btn btn-primary"
+        >
           <IoLogoGoogle className="login-icon" />
           <span>Iniciar Sesión</span>
         </button>
