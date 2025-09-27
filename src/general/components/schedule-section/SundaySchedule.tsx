@@ -1,7 +1,7 @@
 import { ScheduleComponent } from './ScheduleComponent';
 
 const sundayInfo = {
-  dateEvent: 'Domingo 21 de Septiembre, 2025',
+  dateEvent: 'Domingo 5 de Octubre, 2025',
   sesions: [
     {
       name: '11:00AM A 1:00PM - SESIÓN DE LA MAÑANA',

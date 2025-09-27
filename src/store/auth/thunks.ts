@@ -1,4 +1,4 @@
-import { signInWithGoogle } from '../../firebase';
+import { logoutFirebase, signInWithGoogle } from '../../firebase';
 // import type { AppDispatch, RootState } from '../store';
 import type { AppDispatch } from '../store';
 import { checkingCredentials, login, logout } from './authSlice';
@@ -22,5 +22,14 @@ export const startGoogleSignIn = () => {
         photoUrl: photoUrl!,
       })
     );
+  };
+};
+
+export const startLogout = () => {
+  console.log('bye bye');
+  return async (dispatch: AppDispatch) => {
+    const { ok, message } = await dispatch(logoutFirebase);
+    if (!ok) return alert(message);
+    dispatch(logout({ errorMsg: null }));
   };
 };

@@ -2,8 +2,11 @@ import { IoLogoFacebook, IoLogoTiktok } from 'react-icons/io5';
 
 import './footer.css';
 import { Link } from 'react-router';
+import { useSelector } from 'react-redux';
+import type { RootState } from '../store';
 
 export const Footer = () => {
+  const { status } = useSelector((state: RootState) => state.auth);
   return (
     <footer className="footer">
       <div className="container footer-container">
@@ -70,8 +73,14 @@ export const Footer = () => {
                 Invitación
               </a>
             </li>
+
             <li>
-              <Link to={'/desafios'} className="footer-link">
+              <Link
+                to={'/desafios'}
+                className={`footer-link ${
+                  status !== 'authenticated' ? 'disabled-link' : ''
+                }`}
+              >
                 Desafíos
               </Link>
             </li>

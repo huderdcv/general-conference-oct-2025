@@ -47,6 +47,7 @@
 .main-nav-link:active {
   color: #fbc037;
 }
+
 .header-actions {
 }
 .action-login,
@@ -66,6 +67,52 @@
   font-size: 1.6rem;
   font-weight: 600;
   padding-top: 0.1rem;
+}
+
+/* authenticated box */
+.authenticated-box {
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+  color: #fab005;
+}
+.user-box {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.user-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.user-name {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.btn-logout {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.logout-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  fill: #111;
+  transition: all 0.3s;
+}
+.btn-logout span {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.btn-logout:hover .logout-icon {
+  fill: #4b3501;
 }
 
 /*

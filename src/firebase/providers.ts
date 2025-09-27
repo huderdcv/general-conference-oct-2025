@@ -33,3 +33,19 @@ export const signInWithGoogle = async () => {
     };
   }
 };
+
+export const logoutFirebase = async () => {
+  try {
+    await FirebaseAuth.signOut();
+    return {
+      ok: true,
+      message: 'Sesión cerrada exitosamente',
+    };
+  } catch (error) {
+    console.log(error);
+    return {
+      ok: false,
+      message: JSON.stringify(error),
+    };
+  }
+};

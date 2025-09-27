@@ -19,7 +19,7 @@ interface User {
 }
 
 const initialState: AuthState = {
-  status: 'not-authenticated',
+  status: 'checking',
   uid: null,
   email: null,
   displayName: null,

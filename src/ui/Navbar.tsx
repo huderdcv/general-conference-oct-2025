@@ -1,14 +1,20 @@
-import { IoLogoGoogle } from 'react-icons/io5';
+import { IoLogoGoogle, IoLogOut, IoPerson } from 'react-icons/io5';
 import './navbar.css';
 import { Link } from 'react-router';
-import { useDispatch } from 'react-redux';
-import { startGoogleSignIn } from '../store/auth/thunks';
-import type { AppDispatch } from '../store';
+import { useDispatch, useSelector } from 'react-redux';
+import { startGoogleSignIn, startLogout } from '../store/auth/thunks';
+import type { AppDispatch, RootState } from '../store';
 
 export const Navbar = () => {
   const dispatch: AppDispatch = useDispatch();
+  const { status, displayName } = useSelector((state: RootState) => state.auth);
+
   const handleGoogleSignIn = () => {
     dispatch(startGoogleSignIn());
+  };
+
+  const handleLogout = () => {
+    dispatch(startLogout());
   };
   return (
     <header className="header">
@@ -36,21 +42,50 @@ export const Navbar = () => {
               Invitación
             </a>
           </li>
+
           <li>
-            <Link className="main-nav-link" to={'/desafios'}>
+            <Link
+              className={`main-nav-link ${
+                status !== 'authenticated' ? 'disabled-link' : ''
+              }`}
+              to={'/desafios'}
+            >
               Desafíos
             </Link>
           </li>
+
+          {/* {status === 'authenticated' && (
+            <li>
+              <Link className="main-nav-link" to={'/desafios'}>
+                Desafíos
+              </Link>
+            </li>
+          )} */}
         </ul>
       </nav>
       <div className="header-actions">
-        <button
-          onClick={handleGoogleSignIn}
-          className="action-login btn btn-primary"
-        >
-          <IoLogoGoogle className="login-icon" />
-          <span>Iniciar Sesión</span>
-        </button>
+        {status == 'checking' ? (
+          <p>cargando...</p>
+        ) : status == 'not-authenticated' ? (
+          <button
+            onClick={handleGoogleSignIn}
+            className="action-login btn btn-primary"
+          >
+            <IoLogoGoogle className="login-icon" />
+            <span>Iniciar Sesión</span>
+          </button>
+        ) : (
+          <div className="authenticated-box">
+            <p className="user-box">
+              <IoPerson className="user-icon" />
+              <span className="user-name">{displayName?.split(' ')[0]}</span>
+            </p>
+            <button onClick={handleLogout} className="btn-logout">
+              <IoLogOut className="logout-icon" />
+              {/* <span>Salir</span> */}
+            </button>
+          </div>
+        )}
       </div>
     </header>
   );
