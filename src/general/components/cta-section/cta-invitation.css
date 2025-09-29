@@ -1,0 +1,170 @@
+.cta-invitacion {
+  padding: 9.6rem 0;
+}
+.invitation-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  position: relative;
+}
+.invitation-img-box {
+  position: relative;
+}
+.invitation-name {
+  position: absolute;
+  font-family: 'Great Vibes', serif;
+  top: 43.5%;
+  left: 72%;
+  font-size: 2.4rem;
+  color: #111;
+}
+.invitation-msg {
+  position: absolute;
+  width: 25%;
+  height: 5rem;
+  background-color: rgba(0, 128, 0, 0);
+  top: 53%;
+  left: 72%;
+  font-size: 1.6rem;
+  white-space: pre-line;
+}
+
+.invitation-img {
+  width: 100%;
+  height: auto;
+}
+.invitation-box {
+  background-image: url('/cta/background-ovejas.png'),
+    linear-gradient(to bottom, #fbc037, #6b3332);
+  background-size: cover;
+  padding: 3.2rem;
+  display: flex;
+  flex-direction: column;
+}
+.invitation-title {
+  font-size: 3.6rem;
+  font-weight: 800;
+  color: #5b1c1b;
+  margin-bottom: 2.4rem;
+}
+.invitation-description {
+  color: #7c4949;
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 3.2rem;
+}
+.input-name {
+  border: none;
+  color: #333;
+  padding: 1.2rem 1.6rem;
+  font-size: 2.4rem;
+  font-family: 'Great vibes', 'Serif';
+  margin-bottom: 2.4rem;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.input-name:focus {
+  outline: none;
+}
+
+.input-msg {
+  height: 100%;
+  color: #333;
+  border: none;
+  padding: 1.2rem 1.6rem;
+  font-size: 1.8rem;
+  font-family: 'Lato', 'Serif';
+  background-color: rgba(255, 255, 255, 0.5);
+  resize: none;
+  /* overflow: hidden; */
+}
+.input-msg:focus {
+  outline: none;
+}
+.invitation-actions {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.2rem;
+  margin-top: 2.4rem;
+}
+
+.invitation-btn-download,
+.invitation-btn-clean {
+  border: none;
+  font-size: 1.4rem;
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.invitation-btn-download {
+  background-color: #fab005;
+  color: #5b1c1b;
+  padding: 1.2rem 2rem;
+}
+.invitation-btn-download:hover {
+  background-color: #e19e05;
+}
+.inv-icon-download {
+}
+.invitation-btn-clean {
+  background-color: #fee7b4;
+  padding: 0 1rem;
+  color: #5b1c1b;
+}
+.invitation-btn-clean:hover {
+  background-color: #fddf9b;
+}
+.inv-icon-clean {
+}
+
+/* div hidden */
+.cta-image-name-2 {
+  position: absolute;
+  top: 43.4%;
+  left: 71.5%;
+  font-family: 'Great vibes', serif;
+  font-size: 56px;
+  color: #333;
+}
+.cta-image-msg-2 {
+  position: absolute;
+  top: 52.6%;
+  left: 71.5%;
+  font-family: 'Lato', serif;
+  font-size: 39px;
+  color: #555;
+  white-space: pre-line;
+  line-height: 0.9;
+  width: 25%;
+}
+
+/* sweet alert */
+.swal-title {
+  font-size: 3rem !important; /* título más grande */
+  font-weight: bold;
+}
+
+.swal-text {
+  font-size: 1.4rem !important; /* texto más grande */
+  line-height: 1;
+}
+.my-confirm-btn {
+  font-size: 2rem;
+  border-radius: 0%;
+}
+
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+  - Font sizes (px)
+    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+--- 07 WHITESPACE
+  - Spacing system (px)
+    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 
+    160 / 192 / 224 / 256 / 320 / 384 
+448 512
+*/

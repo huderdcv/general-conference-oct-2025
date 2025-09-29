@@ -35,7 +35,7 @@ export const Navbar = () => {
             </a>
           </li>
           <li>
-            <a className="main-nav-link" href="#">
+            <a className="main-nav-link" href="#cta-invitacion">
               Invitación
             </a>
           </li>
