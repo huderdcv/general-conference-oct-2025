@@ -53,6 +53,7 @@
   cursor: pointer;
   transition: all 0.3s;
   text-decoration: none;
+  font-weight: 600;
 }
 
 .btn-primary,
@@ -117,6 +118,50 @@
   .btn:link,
   .btn:visited {
     font-size: 1.8rem;
+  }
+}
+
+/**************************/
+/* BELOW 944px tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+  .inicio {
+    background-image: url(/jesucristo-ovejas-2.jpg);
+    /* grid-template-columns: 1fr; */
+  }
+
+  .hero-box {
+    padding-top: 19.2rem;
+    padding-left: 9.6rem;
+    /* padding-bottom: 8rem; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-description {
+    margin-bottom: 6.4rem;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 1.6rem;
+    /* margin-top: auto; */
+  }
+}
+
+/**************************/
+/* BELOW 704px smaller tablets) */
+/**************************/
+
+@media (max-width: 44em) {
+  .hero-box {
+    padding-top: 24.5rem;
+  }
+  .heading-primary {
+    font-size: 7.4rem;
   }
 }
 

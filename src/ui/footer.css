@@ -106,7 +106,7 @@
 /*? MEDIAS */
 @media (max-width: 44em) {
   .footer {
-    margin: 8rem 0;
+    padding: 8rem 0;
   }
   .footer-container {
     display: grid;

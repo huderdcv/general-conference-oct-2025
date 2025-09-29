@@ -193,6 +193,31 @@
   }
 }
 
+/**************************/
+/* BELOW 944px tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+  .invitation-container {
+    grid-template-columns: 1fr;
+  }
+  .invitation-box {
+    order: -1;
+  }
+  .invitation-title {
+    margin-bottom: 1.2rem;
+  }
+  .invitation-description {
+    color: #6b3332;
+    font-size: 2rem;
+    margin-bottom: 2.4rem;
+  }
+  .invitation-btn-download,
+  .invitation-btn-clean {
+    font-size: 1.6rem;
+  }
+}
+
 /*
 --- 01 TYPOGRAPHY SYSTEM
 

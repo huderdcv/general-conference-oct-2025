@@ -215,14 +215,19 @@
     font-weight: 600;
   }
 }
-/* @media (max-width: 44em) {
-  .cd-value {
-    font-size: 3.6rem;
+
+/**************************/
+/* BELOW 944px tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+  .header {
+    padding: 0 2.4rem;
   }
-  .cd-property {
-    font-size: 1rem;
+  .mobile-nav {
+    right: 2.4rem;
   }
-} */
+}
 
 /*
 --- 01 TYPOGRAPHY SYSTEM
