@@ -41,6 +41,20 @@
   }
 }
 
+@media (max-width: 34em) {
+  .login-icon {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+  .action-login,
+  .action-login:link,
+  .action-login:visited {
+    font-size: 2rem;
+  }
+  .action-login span {
+    font-size: 2.4rem;
+  }
+}
 /*
 --- 01 TYPOGRAPHY SYSTEM
 

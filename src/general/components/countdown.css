@@ -88,6 +88,18 @@
     align-items: start;
   }
 }
+
+/**************************/
+/* BELOW 544px phones) */
+/**************************/
+
+@media (max-width: 34em) {
+  .cd-container-conference {
+    align-items: start;
+    justify-content: center;
+    padding-left: 0;
+  }
+}
 /* @media (max-width: 44em) {
   .cd-value {
     font-size: 3.6rem;
