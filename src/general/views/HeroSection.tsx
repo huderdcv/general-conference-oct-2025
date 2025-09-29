@@ -1,4 +1,3 @@
-import React from 'react';
 import { Navbar } from '../../ui';
 import { CountDown } from '../components';
 import './herosection.css';
