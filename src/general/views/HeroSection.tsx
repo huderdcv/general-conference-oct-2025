@@ -20,11 +20,11 @@ export const HeroSection = () => {
           Iglesia proporcionan consejo y dirección del Señor
         </p>
         <div className="button-container">
-          <a href="#cta-desafios" className="btn btn-primary">
-            Desafios de Estaca
-          </a>
-          <a href="#" className="btn btn-secondary">
+          <a href="#horarios" className="btn btn-secondary">
             Más Información &darr;{' '}
+          </a>
+          <a href="#cta-evento" className="btn btn-primary">
+            Evento de Estaca
           </a>
         </div>
       </div>

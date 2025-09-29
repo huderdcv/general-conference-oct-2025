@@ -1,5 +1,6 @@
 .schedule-section {
   padding: 9.6rem 0;
+  background-color: #feefcd;
 }
 
 /* schedule box */
@@ -20,7 +21,7 @@
 
 .button-schedule {
   padding: 1.2rem 2.4rem;
-  background-color: #fff;
+  background-color: #feefcd;
   border: none;
   /* border: 1px solid #333; */
   box-shadow: inset 0 0 2px #333;
@@ -31,7 +32,7 @@
   transition: all 0.3s;
 }
 .button-schedule:hover {
-  background-color: #efefef;
+  background-color: #fee7b4;
 }
 
 .active-schedule {
@@ -92,7 +93,7 @@
 .schedule-point {
   width: 3.2rem;
   height: 3.2rem;
-  background-color: #fff;
+  background-color: #feefcd;
   border: 1px solid var(--brand-color);
   border-radius: 50%;
   position: absolute;

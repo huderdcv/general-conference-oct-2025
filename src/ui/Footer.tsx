@@ -59,7 +59,7 @@ export const Footer = () => {
         <div className="nav-col">
           <ul className="footer-nav">
             <li>
-              <a href={'#about-section'} className="footer-link">
+              <a href={'#'} className="footer-link">
                 Inicio
               </a>
             </li>
@@ -69,7 +69,12 @@ export const Footer = () => {
               </a>
             </li>
             <li>
-              <a href={'#'} className="footer-link">
+              <a href={'#cta-evento'} className="footer-link">
+                Evento
+              </a>
+            </li>
+            <li>
+              <a href={'#cta-invitacion'} className="footer-link">
                 Invitación
               </a>
             </li>

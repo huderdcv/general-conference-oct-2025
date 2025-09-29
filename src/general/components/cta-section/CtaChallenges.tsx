@@ -9,7 +9,7 @@ import { BtnSigninGoogle } from '../../../ui/components';
 export const CtaChallenges = () => {
   const { status } = useSelector((state: RootState) => state.auth);
   return (
-    <section id="cta-desafios" className="cta-desafios">
+    <section id="cta-evento" className="cta-desafios">
       <div className="container">
         <div className="challenges-container grid grid--2-cols">
           <div className="challenges-box">

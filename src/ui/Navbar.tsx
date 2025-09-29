@@ -35,6 +35,11 @@ export const Navbar = () => {
             </a>
           </li>
           <li>
+            <a className="main-nav-link" href="#cta-evento">
+              Evento
+            </a>
+          </li>
+          <li>
             <a className="main-nav-link" href="#cta-invitacion">
               Invitación
             </a>
@@ -62,7 +67,7 @@ export const Navbar = () => {
       </nav>
       <div className="header-actions">
         {status == 'checking' ? (
-          <p>cargando...</p>
+          <p>verificando...</p>
         ) : status == 'not-authenticated' ? (
           <BtnSigninGoogle />
         ) : (
