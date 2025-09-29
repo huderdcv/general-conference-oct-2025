@@ -1,6 +1,8 @@
 .cta-invitacion {
   padding: 9.6rem 0;
   background-color: #feefcd;
+  position: relative;
+  /* z-index: -10; */
 }
 .invitation-container {
   display: grid;

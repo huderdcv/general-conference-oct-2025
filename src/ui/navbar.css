@@ -17,18 +17,27 @@
   font-size: 2rem;
   color: #fff;
   background-color: rgba(51, 51, 51, 0.1);
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr;
   position: fixed;
   padding: 0 4.8rem;
   align-items: center;
+  z-index: 20;
 }
 
 .header-logo-img {
   width: 6.4rem;
   height: auto;
 }
+
+.header-menu {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
 .header-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .main-nav-list {
   display: flex;
@@ -97,6 +106,24 @@
   fill: #4b3501;
 }
 
+/* mobile nav */
+.mobile-nav {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  right: 4.8rem;
+}
+.icon-mobile-nav {
+  width: 4.8rem;
+  height: 4.8rem;
+  color: #333;
+}
+.icon-mobile-nav[name='close-outline'] {
+  display: none;
+}
+
 /*
 --- 01 TYPOGRAPHY SYSTEM
 
@@ -106,6 +133,109 @@
 --- 07 WHITESPACE
   - Spacing system (px)
     2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 
+    160 / 192 / 224 / 256 / 320 / 384 
+448 512
+*/
+
+/*? MEDIA */
+/**************************/
+/* BELOW 944px (tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+  .mobile-nav {
+    display: block;
+    z-index: 30;
+  }
+
+  .header-menu {
+    background-color: rgba(255, 247, 230, 0.97);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: all 0.5s;
+  }
+
+  .nav-open .header-menu {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .nav-open .icon-mobile-nav[name='close-outline'] {
+    display: block;
+  }
+  .nav-open .icon-mobile-nav[name='menu-outline'] {
+    display: none;
+  }
+
+  .main-nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    gap: 4.8rem;
+    margin-bottom: 4.8rem;
+  }
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+    color: #fab005;
+  }
+  .header-actions {
+    order: -1;
+    margin-bottom: 4.8rem;
+  }
+  .user-box {
+    text-shadow: none;
+    color: #5b1c1b;
+  }
+  .user-icon {
+    width: 3rem;
+    height: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  .user-name {
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .verifying {
+    color: #5b1c1b;
+    font-weight: 600;
+  }
+}
+/* @media (max-width: 44em) {
+  .cd-value {
+    font-size: 3.6rem;
+  }
+  .cd-property {
+    font-size: 1rem;
+  }
+} */
+
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+  - Font sizes (px)
+    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+    118 / 142 / 170 / 204 / 245
+
+--- 07 WHITESPACE
+  - Spacing system (px)
+    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 
+
     160 / 192 / 224 / 256 / 320 / 384 
 448 512
 */
