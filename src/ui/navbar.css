@@ -50,24 +50,6 @@
 
 .header-actions {
 }
-.action-login,
-.action-login:link,
-.action-login:visited {
-  /* font-size: 1.6rem; */
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  border: none;
-}
-
-.login-icon {
-}
-
-.action-login span {
-  font-size: 1.6rem;
-  font-weight: 600;
-  padding-top: 0.1rem;
-}
 
 /* authenticated box */
 .authenticated-box {

@@ -3,6 +3,8 @@ import { startGoogleSignIn } from '../../store/auth/thunks';
 import { IoLogoGoogle } from 'react-icons/io5';
 import type { AppDispatch } from '../../store';
 
+import './btn-signin-google.css';
+
 export const BtnSigninGoogle = () => {
   const dispatch: AppDispatch = useDispatch();
 

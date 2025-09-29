@@ -86,3 +86,52 @@
     160 / 192 / 224 / 256 / 320 / 384 
 448 512
 */
+
+/*? QUERIES  */
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 91em) {
+  .heading-primary {
+    font-size: 9.8rem;
+  }
+}
+
+/**************************/
+/* BELOW 1232px (landscape tablets) */
+/**************************/
+
+@media (max-width: 77em) {
+  .inicio {
+    grid-template-rows: auto auto;
+  }
+  .heading-primary {
+    font-size: 8.6rem;
+  }
+  .hero-description {
+    font-size: 1.6rem;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    font-size: 1.8rem;
+  }
+}
+
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+  - Font sizes (px)
+    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+    118 / 142 / 170 / 204 / 245
+
+--- 07 WHITESPACE
+  - Spacing system (px)
+    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 
+
+    160 / 192 / 224 / 256 / 320 / 384 
+448 512
+*/

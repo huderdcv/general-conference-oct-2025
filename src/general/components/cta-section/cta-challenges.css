@@ -104,3 +104,47 @@
     160 / 192 / 224 / 256 / 320 / 384 
 448 512
 */
+
+/*? QUERIES  */
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+
+/**************************/
+/* BELOW 1232px (landscape tablets) */
+/**************************/
+
+@media (max-width: 77em) {
+  .step-info {
+    font-size: 1.6rem;
+  }
+
+  .challenges-btn,
+  .challenges-btn:link,
+  .challenges-btn:visited {
+    font-size: 2rem;
+  }
+  .participants-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  .participants-text {
+    font-size: 1.8rem;
+  }
+}
+
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+  - Font sizes (px)
+    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+    118 / 142 / 170 / 204 / 245
+
+--- 07 WHITESPACE
+  - Spacing system (px)
+    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 
+
+    160 / 192 / 224 / 256 / 320 / 384 
+448 512
+*/

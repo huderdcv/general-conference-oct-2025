@@ -138,3 +138,24 @@ body {
 .grid--5-cols {
   grid-template-columns: repeat(5, 1fr);
 }
+
+/*? QUERIES  */
+/**************************/
+/* BELOW 1232px (landscape tablets) */
+/**************************/
+
+@media (max-width: 77em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/**************************/
+/* BELOW 944px tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+}
