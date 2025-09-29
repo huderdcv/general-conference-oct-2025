@@ -1,17 +1,14 @@
-import { IoLogoGoogle, IoLogOut, IoPerson } from 'react-icons/io5';
+import { IoLogOut, IoPerson } from 'react-icons/io5';
 import './navbar.css';
 import { Link } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
-import { startGoogleSignIn, startLogout } from '../store/auth/thunks';
+import { startLogout } from '../store/auth/thunks';
 import type { AppDispatch, RootState } from '../store';
+import { BtnSigninGoogle } from './components';
 
 export const Navbar = () => {
   const dispatch: AppDispatch = useDispatch();
   const { status, displayName } = useSelector((state: RootState) => state.auth);
-
-  const handleGoogleSignIn = () => {
-    dispatch(startGoogleSignIn());
-  };
 
   const handleLogout = () => {
     dispatch(startLogout());
@@ -67,13 +64,7 @@ export const Navbar = () => {
         {status == 'checking' ? (
           <p>cargando...</p>
         ) : status == 'not-authenticated' ? (
-          <button
-            onClick={handleGoogleSignIn}
-            className="action-login btn btn-primary"
-          >
-            <IoLogoGoogle className="login-icon" />
-            <span>Iniciar Sesión</span>
-          </button>
+          <BtnSigninGoogle />
         ) : (
           <div className="authenticated-box">
             <p className="user-box">

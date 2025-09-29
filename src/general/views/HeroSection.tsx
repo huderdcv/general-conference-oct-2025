@@ -20,7 +20,7 @@ export const HeroSection = () => {
           Iglesia proporcionan consejo y dirección del Señor
         </p>
         <div className="button-container">
-          <a href="#" className="btn btn-primary">
+          <a href="#cta-desafios" className="btn btn-primary">
             Desafios de Estaca
           </a>
           <a href="#" className="btn btn-secondary">

@@ -1,0 +1,103 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+  - Font sizes (px)
+    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+--- 07 WHITESPACE
+  - Spacing system (px)
+    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 
+    160 / 192 / 224 / 256 / 320 / 384 
+448 512
+*/
+
+.cta-desafios {
+}
+
+.challenges-container {
+  grid-template-columns: 4fr 3fr;
+  background-image: linear-gradient(
+      to right,
+      transparent 40%,
+      rgba(0, 0, 0, 0.6) 50%
+    ),
+    url('/cta/centro-de-conferencias.JPG');
+  width: 100%;
+  /* height: 30vh; */
+  background-size: cover;
+  border-radius: 1rem;
+}
+.challenges-box {
+  grid-column: 2;
+}
+.challenges-title {
+  font-size: 3.6rem;
+  color: #fdd882;
+  margin-bottom: 3.2rem;
+}
+.challenges-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 3.2rem;
+}
+.challenges-step {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+.step-number {
+  color: #cebbbb;
+  font-size: 3rem;
+}
+.step-info {
+  font-size: 1.8rem;
+  color: #ded2d1;
+}
+.challenges-btn,
+.challenges-btn:link,
+.challenges-btn:visited {
+  background-color: #fab005;
+  color: #5b1c1b;
+  font-weight: 600;
+  display: inline-block;
+  font-size: 2.4rem;
+  text-decoration: none;
+  padding: 1.2rem 2.4rem;
+  transition: all 0.3s;
+}
+.challenges-btn:hover,
+.challenges-btn:active {
+  background-color: #e19e05;
+}
+.box-actions-info {
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+}
+.participants {
+  color: #fee7b4;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.participants-icon {
+  width: 3rem;
+  height: 3rem;
+}
+.participants-text {
+  font-size: 2.4rem;
+}
+
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+  - Font sizes (px)
+    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+--- 07 WHITESPACE
+  - Spacing system (px)
+    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 
+    160 / 192 / 224 / 256 / 320 / 384 
+448 512
+*/
