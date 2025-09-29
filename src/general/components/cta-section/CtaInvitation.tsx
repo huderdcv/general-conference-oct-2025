@@ -76,7 +76,7 @@ export const CtaInvitation = () => {
         <div className="invitation-img-box">
           <img
             className="invitation-img"
-            src="/cta/invitacion.png"
+            src={`${import.meta.env.BASE_URL}cta/invitacion.png`}
             alt="Invitacion de la conferencia general con los horarios"
           />
           <p className="invitation-name">{name}</p>
@@ -138,7 +138,10 @@ export const CtaInvitation = () => {
           position: 'absolute',
           left: '-9999px', // fuera de pantalla
           top: 0,
-          backgroundImage: "url('/cta/invitacion.png')",
+          backgroundImage: `url('${
+            import.meta.env.BASE_URL
+          }cta/invitacion.png')`,
+
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           display: 'flex',

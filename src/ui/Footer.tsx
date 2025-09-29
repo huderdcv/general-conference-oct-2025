@@ -14,7 +14,7 @@ export const Footer = () => {
         <div className="logo-col">
           <a href={'#'} className="logo-box">
             <img
-              src={`/logo-estaca.png`}
+              src={`${import.meta.env.BASE_URL}logo-estaca.png`}
               alt="Logo de la estaca Ayacucho"
               width={900}
               height={1203}
