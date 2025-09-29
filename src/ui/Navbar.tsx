@@ -20,7 +20,7 @@ export const Navbar = () => {
       <a className="header-logo" href="#">
         <img
           className="header-logo-img"
-          src="/logo-estaca.png"
+          src={`${import.meta.env.BASE_URL}logo-estaca.png`}
           alt="Logo de la estaca Ayacucho"
         />
       </a>
