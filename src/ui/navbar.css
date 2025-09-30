@@ -16,7 +16,8 @@
   height: 9.6rem;
   font-size: 2rem;
   color: #fff;
-  background-color: rgba(51, 51, 51, 0.1);
+  /* background-color: rgba(51, 51, 51, 0.1); */
+  /* background-color: #feefcd; */
   display: grid;
   grid-template-columns: auto 1fr;
   position: fixed;
@@ -48,6 +49,7 @@
 .main-nav-link:visited {
   text-decoration: none;
   color: #fdd882;
+  /* color: #fab005; */
   font-weight: 600;
   transition: all 0.3s;
   font-size: 2rem;

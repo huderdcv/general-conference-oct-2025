@@ -3,8 +3,14 @@ import { GeneralPage } from '../general';
 import { ChallengesPage } from '../challenges';
 import { useCheckAuth } from '../hooks';
 import { PrivateRoute } from './PrivateRoute';
+import { useEffect } from 'react';
+// import { getNumberTotalUsers } from '../helpers';
+// import { fetchTotalUsers } from '../helpers';
 
 export const AppRouter = () => {
+  useEffect(() => {
+    // getNumberTotalUsers();
+  }, []);
   useCheckAuth();
   return (
     <Routes>

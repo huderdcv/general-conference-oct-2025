@@ -1,6 +1,6 @@
 import { IoCloseSharp, IoLogOut, IoMenuSharp, IoPerson } from 'react-icons/io5';
 import './navbar.css';
-import { Link } from 'react-router';
+// import { Link } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import { startLogout } from '../store/auth/thunks';
 import type { AppDispatch, RootState } from '../store';
@@ -48,14 +48,15 @@ export const Navbar = () => {
               </HashLink>
             </li>
             <li>
-              <Link
+              <HashLink
+                smooth
                 className={`main-nav-link ${
                   status !== 'authenticated' ? 'disabled-link' : ''
                 }`}
-                to={'/desafios'}
+                to={'/desafios#desafios'}
               >
                 Mis desafíos
-              </Link>
+              </HashLink>
             </li>
             {/* {status === 'authenticated' && (
               <li>

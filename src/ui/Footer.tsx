@@ -1,7 +1,7 @@
 import { IoLogoFacebook, IoLogoTiktok } from 'react-icons/io5';
 
 import './footer.css';
-import { Link } from 'react-router';
+// import { Link } from 'react-router';
 import { useSelector } from 'react-redux';
 import type { RootState } from '../store';
 import { HashLink } from 'react-router-hash-link';
@@ -81,14 +81,15 @@ export const Footer = () => {
             </li>
 
             <li>
-              <Link
-                to={'/desafios'}
+              <HashLink
+                smooth
+                to={'/desafios#desafios'}
                 className={`footer-link ${
                   status !== 'authenticated' ? 'disabled-link' : ''
                 }`}
               >
                 Mis desafíos
-              </Link>
+              </HashLink>
             </li>
           </ul>
           <p className="footer-msg">

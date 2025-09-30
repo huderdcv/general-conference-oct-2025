@@ -28,7 +28,7 @@ body {
 /* App Container */
 .app-challenges {
   min-height: 100vh;
-  padding: 2rem 1rem;
+  padding: 9.6rem 1rem 2rem;
   background: linear-gradient(135deg, #ded2d1 0%, #efe8e8 100%);
   min-height: 100vh;
 }
@@ -324,7 +324,7 @@ body {
 /*? Responsive Design */
 @media (max-width: 768px) {
   .app-challenges {
-    padding: 1rem 0.5rem;
+    /* padding: 1rem 0.5rem; */
   }
 
   .challenges-grid {

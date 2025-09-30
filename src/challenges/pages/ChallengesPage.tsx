@@ -104,7 +104,7 @@ export const ChallengesPage = () => {
   return (
     <>
       <Navbar />
-      <div className="app-challenges">
+      <section id="desafios" className="app-challenges">
         <div className="container">
           {/* Header */}
           <header className="header-challenges">
@@ -151,7 +151,7 @@ export const ChallengesPage = () => {
             </p>
           </footer>
         </div>
-      </div>
+      </section>
       <BtnSaveChallenges />
       <Footer />
     </>

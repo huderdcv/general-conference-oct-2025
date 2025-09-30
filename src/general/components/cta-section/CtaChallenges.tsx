@@ -1,10 +1,11 @@
 import { IoPeopleSharp } from 'react-icons/io5';
-import { Link } from 'react-router';
+// import { Link } from 'react-router';
 
 import './cta-challenges.css';
 import { useSelector } from 'react-redux';
 import type { RootState } from '../../../store';
 import { BtnSigninGoogle } from '../../../ui/components';
+import { HashLink } from 'react-router-hash-link';
 
 export const CtaChallenges = () => {
   const { status } = useSelector((state: RootState) => state.auth);
@@ -46,13 +47,17 @@ export const CtaChallenges = () => {
               {status !== 'authenticated' ? (
                 <BtnSigninGoogle />
               ) : (
-                <Link className="challenges-btn" to={'/desafios'}>
+                <HashLink
+                  smooth
+                  className="challenges-btn"
+                  to={'/desafios#desafios'}
+                >
                   Ir a desafíos &rarr;
-                </Link>
+                </HashLink>
               )}
               <p className="participants">
                 <IoPeopleSharp className="participants-icon" />
-                <span className="participants-text">102 participando</span>
+                <span className="participants-text">Únete</span>
               </p>
             </div>
           </div>
