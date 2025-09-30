@@ -1,4 +1,5 @@
 import { logoutFirebase, signInWithGoogle } from '../../firebase';
+import { clearChallengesLogout } from '../challenges';
 // import type { AppDispatch, RootState } from '../store';
 import type { AppDispatch } from '../store';
 import { checkingCredentials, login, logout } from './authSlice';
@@ -31,5 +32,6 @@ export const startLogout = () => {
     const { ok, message } = await dispatch(logoutFirebase);
     if (!ok) return alert(message);
     dispatch(logout({ errorMsg: null }));
+    dispatch(clearChallengesLogout());
   };
 };

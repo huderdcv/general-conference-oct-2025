@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { FirebaseAuth } from '../firebase';
 import { login, logout } from '../store/auth';
+import { startLoadingChallengesState } from '../store/challenges';
 
 export const useCheckAuth = () => {
   const { status } = useSelector((state: RootState) => state.auth);
@@ -21,6 +22,7 @@ export const useCheckAuth = () => {
           photoUrl: photoURL ?? '',
         })
       );
+      dispatch(startLoadingChallengesState());
     });
   }, []);
 

@@ -20,8 +20,8 @@ interface ChallengesState {
 const initialState: ChallengesState = {
   isSaving: false,
   challengesProgress: {
-    challenge1: true,
-    challenge2: true,
+    challenge1: false,
+    challenge2: false,
     challenge3: false,
     challenge4: false,
     challenge5: false,
@@ -29,7 +29,7 @@ const initialState: ChallengesState = {
     challenge7: false,
     challenge8: false,
   },
-  completedCount: 2,
+  completedCount: 0,
   allCompleted: false,
 };
 
@@ -45,13 +45,17 @@ export const challengesSlice = createSlice({
     },
     setChallengesProgress: (
       state,
-      action: PayloadAction<ChallengesProgress>
+      action: PayloadAction<ChallengesProgress | null>
     ) => {
-      state.challengesProgress = action.payload;
-      state.completedCount = Object.values(state.challengesProgress).filter(
-        (value) => value === true
-      ).length;
-      state.allCompleted = state.completedCount === 8;
+      if (action.payload !== null) {
+        state.challengesProgress = action.payload;
+        state.completedCount = Object.values(state.challengesProgress).filter(
+          (value) => value === true
+        ).length;
+        state.allCompleted = state.completedCount === 8;
+      } else {
+        state = initialState;
+      }
     },
     updateChallengesProgress: (state, action: PayloadAction<number>) => {
       const key =
@@ -86,5 +90,6 @@ export const {
   offSavingProgress,
   setChallengesProgress,
   updateChallengesProgress,
+  clearChallengesLogout,
 } = challengesSlice.actions;
 export const challengesReducer = challengesSlice.reducer;
