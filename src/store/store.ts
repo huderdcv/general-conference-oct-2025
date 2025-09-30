@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { authReducer } from './auth';
+import { challengesReducer } from './challenges';
 
 export const store = configureStore({
   reducer: {
     auth: authReducer,
+    challenges: challengesReducer,
   },
 });
 

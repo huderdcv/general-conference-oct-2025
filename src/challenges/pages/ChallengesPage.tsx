@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {
   BookOpen,
   Users,
-  Check,
   Mail,
   Share2,
   Edit3,
@@ -12,6 +11,9 @@ import {
 } from 'lucide-react';
 import './challenges-page.css';
 import { Footer, Navbar } from '../../ui';
+import { useSelector } from 'react-redux';
+import type { RootState } from '../../store';
+import { BtnSaveChallenges, ChallengeCard } from '../components';
 
 interface Challenge {
   id: number;
@@ -22,7 +24,11 @@ interface Challenge {
 }
 
 export const ChallengesPage = () => {
-  const [challenges, setChallenges] = useState<Challenge[]>([
+  const { completedCount } = useSelector(
+    (state: RootState) => state.challenges
+  );
+
+  const [challenges] = useState<Challenge[]>([
     {
       id: 1,
       title: 'Invitación personalizada',
@@ -89,21 +95,11 @@ export const ChallengesPage = () => {
     },
   ]);
 
-  const toggleChallenge = (id: number) => {
-    setChallenges((prevChallenges) =>
-      prevChallenges.map((challenge) =>
-        challenge.id === id
-          ? { ...challenge, completed: !challenge.completed }
-          : challenge
-      )
-    );
-  };
-
-  const completedCount = challenges.filter(
-    (challenge) => challenge.completed
-  ).length;
-  const totalCount = challenges.length;
-  const progressPercentage = (completedCount / totalCount) * 100;
+  // const completedCount = challenges.filter(
+  //   (challenge) => challenge.completed
+  // ).length;
+  // const totalCount = challenges.length;
+  const progressPercentage = (completedCount / 8) * 100;
 
   return (
     <>
@@ -123,7 +119,7 @@ export const ChallengesPage = () => {
             <div className="progress-info">
               <h2 className="progress-title">Progreso</h2>
               <span className="progress-count">
-                {completedCount} de {totalCount} completado
+                {completedCount} de {8} completado
               </span>
             </div>
             <div className="progress-bar-container">
@@ -133,7 +129,7 @@ export const ChallengesPage = () => {
               ></div>
             </div>
             <p className="progress-message">
-              {completedCount === totalCount
+              {completedCount === 8
                 ? '🌟 ¡Felicidades! Completaste todos los desafíos.'
                 : `¡No te detengas! Estás avanzando con mucha luz.`}
             </p>
@@ -142,38 +138,7 @@ export const ChallengesPage = () => {
           <section className="challenges-section">
             <div className="challenges-grid">
               {challenges.map((challenge) => (
-                <div
-                  key={challenge.id}
-                  className={`challenge-card ${
-                    challenge.completed ? 'completed' : ''
-                  }`}
-                  onClick={() => toggleChallenge(challenge.id)}
-                >
-                  <div className="challenge-icon">
-                    {challenge.completed ? (
-                      <div className="check-icon">
-                        <Check size={24} />
-                      </div>
-                    ) : (
-                      challenge.icon
-                    )}
-                  </div>
-                  <div className="challenge-content">
-                    <h3 className="challenge-title">{challenge.title}</h3>
-                    <p className="challenge-description">
-                      {challenge.description}
-                    </p>
-                  </div>
-                  <div className="challenge-status">
-                    <div
-                      className={`checkbox ${
-                        challenge.completed ? 'checked' : ''
-                      }`}
-                    >
-                      {challenge.completed && <Check size={16} />}
-                    </div>
-                  </div>
-                </div>
+                <ChallengeCard key={challenge.id} challenge={challenge} />
               ))}
             </div>
           </section>
@@ -187,6 +152,7 @@ export const ChallengesPage = () => {
           </footer>
         </div>
       </div>
+      <BtnSaveChallenges />
       <Footer />
     </>
   );
