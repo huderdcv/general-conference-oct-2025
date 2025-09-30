@@ -4,6 +4,7 @@ import './footer.css';
 import { Link } from 'react-router';
 import { useSelector } from 'react-redux';
 import type { RootState } from '../store';
+import { HashLink } from 'react-router-hash-link';
 
 export const Footer = () => {
   const { status } = useSelector((state: RootState) => state.auth);
@@ -12,7 +13,7 @@ export const Footer = () => {
       <div className="container footer-container">
         {/* logo col */}
         <div className="logo-col">
-          <a href={'#'} className="logo-box">
+          <HashLink smooth to={'/#'} className="logo-box">
             <img
               src={`${import.meta.env.BASE_URL}logo-estaca.png`}
               alt="Logo de la estaca Ayacucho"
@@ -21,7 +22,7 @@ export const Footer = () => {
               className="footer-logo-img"
             />
             <span className="footer-logo-text">EstacaAyacucho</span>
-          </a>
+          </HashLink>
           <p className="copyright-text">Copyright &copy;2025</p>
         </div>
         {/* address col */}
@@ -59,24 +60,24 @@ export const Footer = () => {
         <div className="nav-col">
           <ul className="footer-nav">
             <li>
-              <a href={'#'} className="footer-link">
+              <HashLink smooth to={'/#'} className="footer-link">
                 Inicio
-              </a>
+              </HashLink>
             </li>
             <li>
-              <a href={'#horarios'} className="footer-link">
+              <HashLink smooth to={'/#horarios'} className="footer-link">
                 Horarios
-              </a>
+              </HashLink>
             </li>
             <li>
-              <a href={'#cta-evento'} className="footer-link">
+              <HashLink smooth to={'/#cta-evento'} className="footer-link">
                 Evento
-              </a>
+              </HashLink>
             </li>
             <li>
-              <a href={'#cta-invitacion'} className="footer-link">
+              <HashLink smooth to={'/#cta-invitacion'} className="footer-link">
                 Invitación
-              </a>
+              </HashLink>
             </li>
 
             <li>
@@ -86,7 +87,7 @@ export const Footer = () => {
                   status !== 'authenticated' ? 'disabled-link' : ''
                 }`}
               >
-                Desafíos
+                Mis desafíos
               </Link>
             </li>
           </ul>

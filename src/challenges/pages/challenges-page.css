@@ -1,0 +1,440 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', sans-serif; */
+  /* line-height: 1.6; */
+  /* color: green; */
+}
+
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+  - Font sizes (px)
+    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+--- 07 WHITESPACE
+  - Spacing system (px)
+    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 
+    160 / 192 / 224 / 256 / 320 / 384 
+448 512
+*/
+
+/* App Container */
+.app-challenges {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #ded2d1 0%, #efe8e8 100%);
+  min-height: 100vh;
+}
+
+/* .container {
+  max-width: 1200px;
+  margin: 0 auto;
+} */
+
+/* Header Styles */
+.header-challenges {
+  text-align: center;
+  margin-bottom: 5.2rem;
+  padding: 2rem 0;
+}
+
+.title {
+  font-size: 6.2rem;
+  font-weight: 400;
+  color: #5b1c1b;
+  margin-bottom: 3.2rem;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 2rem;
+  color: #5f6368;
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Progress Section */
+.progress-section {
+  background: white;
+  padding: 3.2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 4.8rem;
+  border: 1px solid rgba(250, 176, 5, 0.1);
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.progress-title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #4b3501;
+}
+
+.progress-count {
+  font-size: 2.4rem;
+  color: #fab005;
+  font-weight: 500;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 12px;
+  background: #f5f5dc;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 3.2rem;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #fab005 0%, #fdd882 100%);
+  border-radius: 6px;
+  transition: width 0.6s ease-out;
+  position: relative;
+}
+
+.progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.progress-message {
+  text-align: center;
+  color: #5f6368;
+  font-size: 1.8rem;
+  font-style: italic;
+}
+
+/* Challenges Section */
+.challenges-section {
+  margin-bottom: 3rem;
+}
+
+.challenges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3.2rem;
+}
+
+/* Challenge Card */
+.challenge-card {
+  background: white;
+  padding: 2.4rem;
+  border-radius: 12px;
+  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.08);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.challenge-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.4rem;
+  background: linear-gradient(90deg, #fab005 0%, #fdd882 100%);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.challenge-card:hover::before {
+  transform: scaleX(1);
+}
+
+.challenge-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  border-color: rgba(250, 176, 5, 0.2);
+}
+
+.challenge-card.completed {
+  background: linear-gradient(135deg, #fff7e6 0%, #f5f5dc 100%);
+  border-color: #fab005;
+}
+
+.challenge-card.completed::before {
+  transform: scaleX(1);
+}
+
+/* Challenge Icon */
+.challenge-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff7e6;
+  border-radius: 12px;
+  color: #fab005;
+  transition: all 0.3s ease;
+}
+
+.challenge-card.completed .challenge-icon {
+  background: #fab005;
+  color: white;
+}
+
+.check-icon {
+  background: #fab005;
+  color: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: checkBounce 0.6s ease;
+}
+
+@keyframes checkBounce {
+  0%,
+  20%,
+  53%,
+  80%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  40%,
+  43% {
+    transform: translate3d(0, -8px, 0) scale(1.1);
+  }
+  70% {
+    transform: translate3d(0, -4px, 0) scale(1.05);
+  }
+  90% {
+    transform: translate3d(0, -2px, 0) scale(1.02);
+  }
+}
+
+/* Challenge Content */
+.challenge-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.challenge-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #4b3501;
+  margin-bottom: 1.2rem;
+}
+
+.challenge-description {
+  font-size: 1.6rem;
+  color: #5f6368;
+  line-height: 1.5;
+}
+
+.challenge-card.completed .challenge-title {
+  color: #fab005;
+}
+
+/* Challenge Status */
+.challenge-status {
+  flex-shrink: 0;
+}
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ddd6c1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.checkbox.checked {
+  background: #fab005;
+  border-color: #fab005;
+  animation: checkPulse 0.4s ease;
+}
+
+@keyframes checkPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Footer */
+.footer-challenges {
+  text-align: center;
+  padding: 3.2rem 0;
+  color: #5f6368;
+  font-style: italic;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+.footer-challenges p {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+/*? Responsive Design */
+@media (max-width: 768px) {
+  .app-challenges {
+    padding: 1rem 0.5rem;
+  }
+
+  .challenges-grid {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+
+  .challenge-card {
+    padding: 1.25rem;
+  }
+
+  .progress-section {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 5.2rem;
+  }
+  .challenge-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .challenge-content {
+    order: 1;
+  }
+
+  .challenge-status {
+    order: 2;
+  }
+
+  .challenge-icon {
+    order: 0;
+  }
+
+  .progress-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+    margin-bottom: 3.2rem;
+  }
+}
+
+/* Animation for completed state */
+@keyframes celebrationPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+.challenge-card.completed {
+  animation: celebrationPulse 2s ease-in-out infinite;
+}
+
+/* Smooth focus states for accessibility */
+.challenge-card:focus {
+  outline: 3px solid rgba(250, 176, 5, 0.5);
+  outline-offset: 2px;
+}
+
+.challenge-card:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Loading state animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.challenge-card {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.challenge-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.challenge-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.challenge-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.challenge-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.challenge-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.challenge-card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.challenge-card:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.challenge-card:nth-child(8) {
+  animation-delay: 0.8s;
+}
