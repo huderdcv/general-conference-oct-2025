@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import { logoutFirebase, signInWithGoogle } from '../../firebase';
 import { clearChallengesLogout } from '../challenges';
 // import type { AppDispatch, RootState } from '../store';
@@ -23,15 +24,42 @@ export const startGoogleSignIn = () => {
         photoUrl: photoUrl!,
       })
     );
+    //alert
+    Swal.fire({
+      title: '¡Sesión iniciada!',
+      text: 'Ahora puedes ir a desafíos y guardar tu progreso.',
+      icon: 'success',
+      confirmButtonText: 'Aceptar',
+      confirmButtonColor: '#3085d6',
+      width: '50rem',
+      customClass: {
+        title: 'swal-title',
+        htmlContainer: 'swal-text',
+        confirmButton: 'my-confirm-btn',
+      },
+    });
   };
 };
 
 export const startLogout = () => {
-  console.log('bye bye');
   return async (dispatch: AppDispatch) => {
     const { ok, message } = await dispatch(logoutFirebase);
     if (!ok) return alert(message);
     dispatch(logout({ errorMsg: null }));
     dispatch(clearChallengesLogout());
+    //alert
+    Swal.fire({
+      title: '¡Adiós por ahora!',
+      text: 'Tu sesión ha finalizado. Te esperamos de nuevo.',
+      icon: 'success',
+      confirmButtonText: 'Aceptar',
+      confirmButtonColor: '#3085d6',
+      width: '50rem',
+      customClass: {
+        title: 'swal-title',
+        htmlContainer: 'swal-text',
+        confirmButton: 'my-confirm-btn',
+      },
+    });
   };
 };

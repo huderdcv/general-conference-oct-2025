@@ -20,7 +20,7 @@
   /* background-color: #feefcd; */
   display: grid;
   grid-template-columns: auto 1fr;
-  position: fixed;
+  position: absolute;
   padding: 0 4.8rem;
   align-items: center;
   z-index: 20;

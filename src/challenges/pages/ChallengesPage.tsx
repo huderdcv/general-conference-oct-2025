@@ -129,9 +129,17 @@ export const ChallengesPage = () => {
               ></div>
             </div>
             <p className="progress-message">
-              {completedCount === 8
-                ? '🌟 ¡Felicidades! Completaste todos los desafíos.'
-                : `¡No te detengas! Estás avanzando con mucha luz.`}
+              {completedCount === 8 ? (
+                <>
+                  <span>🌟 ¡Felicidades! Completaste todos los desafíos.</span>
+                  <span style={{ display: 'block' }}>
+                    Envía un WhatsApp al Hno. Huder (970151568) para coordinar
+                    tu reconocimiento de la estaca 📲✨.
+                  </span>
+                </>
+              ) : (
+                `¡No te detengas! Estás avanzando con mucha luz.`
+              )}
             </p>
           </section>
           {/* Challenges Grid */}

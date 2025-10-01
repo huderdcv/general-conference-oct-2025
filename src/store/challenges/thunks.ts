@@ -11,7 +11,6 @@ export const startChallengesState = () => {
   return async (dispatch: AppDispatch, getstate: () => RootState) => {
     dispatch(onSavingProgress());
     const { uid } = getstate().auth;
-    console.log(uid);
     const { challengesProgress, completedCount, allCompleted } =
       getstate().challenges;
     const newStateChallenges = {
