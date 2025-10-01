@@ -99,6 +99,9 @@
     justify-content: center;
     padding-left: 0;
   }
+  .countdown-box {
+    margin-top: 3rem;
+  }
 }
 /* @media (max-width: 44em) {
   .cd-value {
