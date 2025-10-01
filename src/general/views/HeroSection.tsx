@@ -16,7 +16,7 @@ export const HeroSection = () => {
         </h1>
         <p className="hero-description">
           Recibe revelación personal a medida que los líderes generales de la
-          Iglesia proporcionan consejo y dirección del Señor
+          Iglesia proporcionan consejo y dirección del Señor.
         </p>
         <div className="button-container">
           <a href="#horarios" className="btn btn-secondary">
