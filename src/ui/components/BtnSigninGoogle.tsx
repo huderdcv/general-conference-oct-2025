@@ -4,12 +4,14 @@ import { IoLogoGoogle } from 'react-icons/io5';
 import type { AppDispatch } from '../../store';
 
 import './btn-signin-google.css';
+import { useNavigate } from 'react-router';
 
 export const BtnSigninGoogle = () => {
+  const navigate = useNavigate();
   const dispatch: AppDispatch = useDispatch();
 
   const handleGoogleSignIn = () => {
-    dispatch(startGoogleSignIn());
+    dispatch(startGoogleSignIn(navigate));
   };
   return (
     <button

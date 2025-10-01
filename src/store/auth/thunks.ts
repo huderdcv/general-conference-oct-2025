@@ -5,7 +5,7 @@ import { clearChallengesLogout } from '../challenges';
 import type { AppDispatch } from '../store';
 import { checkingCredentials, login, logout } from './authSlice';
 
-export const startGoogleSignIn = () => {
+export const startGoogleSignIn = (navigate: (path: string) => void) => {
   // return async (dispatch: AppDispatch, getState: RootState) => {
   return async (dispatch: AppDispatch) => {
     dispatch(checkingCredentials());
@@ -25,10 +25,12 @@ export const startGoogleSignIn = () => {
       })
     );
 
+    navigate('/desafios');
+
     //alert
     Swal.fire({
       title: '¡Sesión iniciada!',
-      text: 'Ahora puedes ir a desafíos y guardar tu progreso.',
+      text: 'Ahora puedes ver los desafíos y guardar tu progreso.',
       icon: 'success',
       confirmButtonText: 'Aceptar',
       confirmButtonColor: '#3085d6',
@@ -50,8 +52,8 @@ export const startLogout = () => {
     dispatch(clearChallengesLogout());
     //alert
     Swal.fire({
-      title: '¡Adiós por ahora!',
-      text: 'Tu sesión ha finalizado. Te esperamos de nuevo.',
+      title: '¡Sesión cerrada!',
+      text: 'Te esperamos de nuevo para ver tus desafios.',
       icon: 'success',
       confirmButtonText: 'Aceptar',
       confirmButtonColor: '#3085d6',
