@@ -1,5 +1,5 @@
 .inicio {
-  background-image: url(/jesucristo-ovejas.jpg);
+  background-image: url(/jesucristo-ovejas.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right center;
@@ -127,7 +127,7 @@
 
 @media (max-width: 59em) {
   .inicio {
-    background-image: url(/jesucristo-ovejas-2.jpg);
+    background-image: url(/jesucristo-ovejas-2.webp);
     /* grid-template-columns: 1fr; */
   }
 
@@ -171,7 +171,7 @@
 
 @media (max-width: 34em) {
   .inicio {
-    background-image: url(/jesucristo-ovejas-3.jpg);
+    background-image: url(/jesucristo-ovejas-3.webp);
     grid-template-columns: 1fr;
     /* grid-template-columns: 1fr; */
   }

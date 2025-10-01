@@ -15,7 +15,7 @@ export const Footer = () => {
         <div className="logo-col">
           <HashLink smooth to={'/#'} className="logo-box">
             <img
-              src={`${import.meta.env.BASE_URL}logo-estaca.png`}
+              src={`${import.meta.env.BASE_URL}logo-estaca.webp`}
               alt="Logo de la estaca Ayacucho"
               width={900}
               height={1203}

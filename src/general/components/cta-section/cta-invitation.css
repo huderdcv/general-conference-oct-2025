@@ -37,7 +37,7 @@
   height: auto;
 }
 .invitation-box {
-  background-image: url('/cta/background-ovejas.png'),
+  background-image: url('/cta/background-ovejas.webp'),
     linear-gradient(to bottom, #fbc037, #6b3332);
   background-size: cover;
   padding: 3.2rem;

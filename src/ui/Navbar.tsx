@@ -20,7 +20,7 @@ export const Navbar = () => {
       <HashLink smooth className="header-logo" to="/#">
         <img
           className="header-logo-img"
-          src={`${import.meta.env.BASE_URL}logo-estaca.png`}
+          src={`${import.meta.env.BASE_URL}logo-estaca.webp`}
           alt="Logo de la estaca Ayacucho"
         />
       </HashLink>
@@ -68,9 +68,7 @@ export const Navbar = () => {
           </ul>
         </nav>
         <div className="header-actions">
-          {status == 'checking' ? (
-            <p className="verifying">verificando...</p>
-          ) : status == 'not-authenticated' ? (
+          {status !== 'authenticated' ? (
             <div className="container-btn-google">
               <BtnSigninGoogle />
             </div>

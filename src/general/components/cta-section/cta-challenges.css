@@ -24,7 +24,7 @@
       transparent 40%,
       rgba(0, 0, 0, 0.6) 50%
     ),
-    url('/cta/centro-de-conferencias.JPG');
+    url('/cta/centro-de-conferencias.webp');
   width: 100%;
   /* height: 30vh; */
   background-size: cover;
@@ -169,7 +169,7 @@
         transparent 40%,
         rgba(0, 0, 0, 0.6) 50%
       ),
-      url('/cta/centro-de-conferencias-2.jpg');
+      url('/cta/centro-de-conferencias-2.webp');
   }
   .challenges-box {
     grid-column: 1;

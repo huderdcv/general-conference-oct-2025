@@ -24,6 +24,7 @@ export const startGoogleSignIn = () => {
         photoUrl: photoUrl!,
       })
     );
+
     //alert
     Swal.fire({
       title: '¡Sesión iniciada!',
