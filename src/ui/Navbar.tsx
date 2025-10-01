@@ -90,7 +90,7 @@ export const Navbar = ({
               </p>
               <button onClick={handleLogout} className="btn-logout">
                 <IoLogOut className="logout-icon" />
-                {/* <span>Salir</span> */}
+                <span>Salir</span>
               </button>
             </div>
           )}

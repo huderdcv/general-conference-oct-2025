@@ -25,8 +25,8 @@ export const startGoogleSignIn = (navigate: (path: string) => void) => {
       })
     );
 
-    navigate('/desafios');
-
+    navigate('/desafios#desafios');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     //alert
     Swal.fire({
       title: '¡Sesión iniciada!',

@@ -8,6 +8,10 @@ import {
   MessageSquareQuote,
   Sparkles,
   ScanEye,
+  CheckCircle,
+  ClipboardList,
+  Award,
+  Calendar,
 } from 'lucide-react';
 import './challenges-page.css';
 import { Footer, Navbar } from '../../ui';
@@ -109,10 +113,36 @@ export const ChallengesPage = () => {
           {/* Header */}
           <header className="header-challenges">
             <h1 className="title">Desafíos de la Conferencia</h1>
-            <p className="subtitle">
-              Un viaje espiritual con pequeños retos para prepararte, participar
-              y aplicar lo aprendido
-            </p>
+            <ul className="desafios-info">
+              <li>
+                <CheckCircle className="icon green" />
+                <span>
+                  Realiza cada desafío antes, durante y después de la
+                  Conferencia General.
+                </span>
+              </li>
+              <li>
+                <ClipboardList className="icon blue" />
+                <span>
+                  Márcalos a medida que los cumplas y guarda tu progreso con el
+                  botón azul <strong>Guardar</strong>.
+                </span>
+              </li>
+              <li>
+                <Award className="icon yellow" />
+                <span>
+                  ¡Si los completas todos, recibirás un reconocimiento especial
+                  de la estaca!
+                </span>
+              </li>
+              <li>
+                <Calendar className="icon red" />
+                <span>
+                  El evento finaliza el <strong>19 de octubre</strong>.
+                  ¡Asegúrate de completar tus desafíos a tiempo!
+                </span>
+              </li>
+            </ul>
           </header>
           {/* Progress Section */}
           <section className="progress-section">
