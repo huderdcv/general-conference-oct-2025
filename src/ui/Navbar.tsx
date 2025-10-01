@@ -7,7 +7,17 @@ import type { AppDispatch, RootState } from '../store';
 import { BtnSigninGoogle } from './components';
 import { useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
-export const Navbar = () => {
+
+interface Props {
+  colorLink?: string;
+  colorHover?: string;
+  userColor?: string;
+}
+
+export const Navbar = ({
+  colorLink = '#fdd882',
+  colorHover = '#fbc037',
+}: Props) => {
   const [navOpen, setNavOpen] = useState(false);
   const dispatch: AppDispatch = useDispatch();
   const { status, displayName } = useSelector((state: RootState) => state.auth);
@@ -91,6 +101,12 @@ export const Navbar = () => {
         <IoMenuSharp className="icon-mobile-nav" name="menu-outline" />
         <IoCloseSharp className="icon-mobile-nav" name="close-outline" />
       </button>
+      <style>{`
+        .main-nav-link:link { color: ${colorLink}; }
+        .main-nav-link:visited { color: ${colorLink}; }
+        .main-nav-link:hover { color: ${colorHover}; }
+        .main-nav-link:active { color: ${colorHover}; }
+      `}</style>
     </header>
   );
 };

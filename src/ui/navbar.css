@@ -48,7 +48,7 @@
 .main-nav-link:link,
 .main-nav-link:visited {
   text-decoration: none;
-  color: #fdd882;
+  /* color: #fdd882; */
   /* color: #fab005; */
   font-weight: 600;
   transition: all 0.3s;
@@ -56,7 +56,7 @@
 }
 .main-nav-link:hover,
 .main-nav-link:active {
-  color: #fbc037;
+  /* color: #fbc037; */
 }
 
 .header-actions {

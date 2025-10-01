@@ -103,7 +103,7 @@ export const ChallengesPage = () => {
 
   return (
     <>
-      <Navbar />
+      <Navbar colorLink="#af7b04" colorHover="#7d5803" />
       <section id="desafios" className="app-challenges">
         <div className="container">
           {/* Header */}
