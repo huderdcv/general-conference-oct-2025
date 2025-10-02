@@ -37,7 +37,7 @@ export const ChallengesPage = () => {
       id: 1,
       title: 'Invitación personalizada',
       description:
-        'Crea una invitación especial y compártela con un amigo o familiar',
+        'Crea una invitación especial para un amigo o familiar no miembro y comparteselo',
       icon: <Mail size={24} />,
       completed: false,
     },
