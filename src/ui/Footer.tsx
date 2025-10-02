@@ -88,7 +88,7 @@ export const Footer = () => {
                   status !== 'authenticated' ? 'disabled-link' : ''
                 }`}
               >
-                Mis desafíos
+                Ir a desafíos
               </HashLink>
             </li>
           </ul>

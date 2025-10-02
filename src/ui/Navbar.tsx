@@ -65,7 +65,7 @@ export const Navbar = ({
                 }`}
                 to={'/desafios#desafios'}
               >
-                Mis desafíos
+                Ir a desafíos
               </HashLink>
             </li>
             {/* {status === 'authenticated' && (

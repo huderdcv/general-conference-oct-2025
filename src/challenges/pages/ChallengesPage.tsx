@@ -117,15 +117,15 @@ export const ChallengesPage = () => {
               <li>
                 <CheckCircle className="icon green" />
                 <span>
-                  Realiza cada desafío antes, durante y después de la
-                  Conferencia General.
+                  Realiza desafíos antes, durante y después de la Conferencia
+                  General.
                 </span>
               </li>
               <li>
                 <ClipboardList className="icon blue" />
                 <span>
-                  Márcalos a medida que los cumplas y guarda tu progreso con el
-                  botón azul <strong>Guardar</strong>.
+                  Márcalos a medida que los cumplas y guarda tu progreso
+                  presionando el botón azul <strong>Guardar</strong>.
                 </span>
               </li>
               <li>
@@ -138,8 +138,9 @@ export const ChallengesPage = () => {
               <li>
                 <Calendar className="icon red" />
                 <span>
-                  El evento finaliza el <strong>19 de octubre</strong>.
-                  ¡Asegúrate de completar tus desafíos a tiempo!
+                  Este evento finaliza el{' '}
+                  <strong>19 de octubre del 2025</strong>. ¡Asegúrate de
+                  completar tus desafíos a tiempo!
                 </span>
               </li>
             </ul>
